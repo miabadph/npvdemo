@@ -1,0 +1,129 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<html>
+<head>
+    <title>NPV Calculator</title>
+</head>
+<body>
+    <div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6">
+				<form role="form">
+					<div class="form-group">
+						 
+						<label for="cashFlowValue">
+							Cash Flow:
+						</label>
+						<input type="number" class="form-control" id="cashFlowValue">
+						<p class="help-block"> 
+							Input cashflow values one at a time.
+						</p>
+					</div>
+					<div class="form-group">
+						<div class="btn-group" role="group">
+							<button class="btn btn-secondary" type="button" id="addBtn">
+								Add
+							</button> 
+							<button class="btn btn-secondary" type="button" id="removeBtn">
+								Remove
+							</button> 
+							<button class="btn btn-secondary" type="button" id="clearBtn">
+								Clear
+							</button>
+						</div>
+					</div>
+                    <div class="form-group">
+                        <p class="help-block">
+                            Added cashflow values can be viewed here:
+                        </p>
+                        <select class="form-control" size="10" id="cashFlowItems"></select>
+                    </div>
+				</form>
+			</div>
+			<div class="col-md-6">
+                <form role="form">
+                    <div class="form-group">
+
+                        <label for="initialValue">
+                            Initial Value:
+                        </label>
+                        <input type="number" class="form-control" id="initialValue">
+                    </div>
+                    <div class="form-group">
+
+                        <label for="lowerBound">
+                            Lower Bound:
+                        </label>
+                        <input type="number" class="form-control" id="lowerBound" step="0.01" value="0.00">
+                    </div>
+                    <div class="form-group">
+
+                        <label for="upperBound">
+                            Upper Bound:
+                        </label>
+                        <input type="number" class="form-control" id="upperBound" step="0.01" value="0.00">
+                        @*<p class="help-block">
+                Example block-level help text here.
+            </p>*@
+                    </div>
+                    <div class="form-group">
+
+                        <label for="incrementBox">
+                            Increment:
+                        </label>
+                        <input type="number" class="form-control" id="incrementBox" step=".01" value="0.00">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="calcBtn">
+                        Calculate
+                    </button>
+                </form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group">
+                    <p class="help-block">
+                        Results:
+                    </p>
+					<div class="btn-group" role="group">
+						<select class="form-control" id="resultSelector"></select>
+						<button class="btn btn-secondary" type="button" id="displayBtn">
+							Display Results
+						</button> 
+						<button class="btn btn-secondary" type="button" id="clearResultsBtn">
+							Clear Results
+						</button>
+						<button class="btn btn-secondary" type="button" id="refreshResultsBtn">
+							Refresh
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 table-responsive">
+				<table id="tbl" class="tableStyle table table-bordered table-hover">
+					<thead>
+						<tr>
+							<th>
+								Cash Flow
+							</th>
+							<th>
+								Rate
+							</th>
+							<th>
+								NPV
+							</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+		</div>
+	</div>
+
+    <script type="text/javascript" src="~/js/calculator.js?v=2"></script>
+    <link rel="stylesheet" href="~/css/style.css" />
+</body>
+</html>
