@@ -1,0 +1,178 @@
+﻿body {
+}
+table.tableStyle {
+    border: 1px solid #000000;
+    background-color: #FFFFFF;
+    width: 100%;
+    text-align: center;
+	overflow-x: auto;
+}
+
+table.tableStyle td, table.tableStyle th {
+    border: 1px solid #000000;
+    padding: 4px 4px;
+}
+
+table.tableStyle tbody td {
+    font-size: 13px;
+}
+
+table.tableStyle th {
+    background: #4C77FF;
+    background: -moz-linear-gradient(top, #7999ff 0%, #5e84ff 66%, #4C77FF 100%);
+    background: -webkit-linear-gradient(top, #7999ff 0%, #5e84ff 66%, #4C77FF 100%);
+    background: linear-gradient(to bottom, #7999ff 0%, #5e84ff 66%, #4C77FF 100%);
+}
+
+table.tableStyle th {
+    font-size: 17px;
+    font-weight: bold;
+    color: #F0F0F0;
+    text-align: center;
+    border-left: 2px solid #000000;
+}
+
+.formContainerStyle {
+    width: auto;
+    height: 200px;
+    border: solid;
+    border-width: 1px;
+    display: block;
+}
+
+.formStyle {
+    max-width: 200px;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+}
+
+.resultSelectorContainer {
+    width:auto;
+    border:solid;
+    border-width:1px;
+    display:inline-block;
+    overflow:auto;
+}
+
+.resultsGrid1 {
+    grid-area: area1;
+    width: auto;
+    height: 40px;
+    border: solid;
+    border-width: 1px;
+    display: inline-block;
+}
+.resultsGrid2 {
+    grid-area: area2;
+    border: solid;
+    border-width: 1px;
+    display: inline-block;
+    overflow: auto;
+}
+
+.inputGrid1 {
+    grid-area: inputArea1;
+    width: 160px;
+    height: auto;
+    display: block;
+    overflow: auto;
+}
+
+.inputGrid2 {
+    grid-area: inputArea2;
+    width: 200px;
+    height: auto;
+    display: block;
+    overflow: auto;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-areas: 
+        'area1 area1 area1 area1 area1 area1' 
+        'area2 area2 area2 area2 area2 area2';
+    grid-gap: 3px;
+    padding: 5px;
+    overflow: auto;
+}
+
+.inputGrid {
+    display: grid;
+    grid-template-areas: 'inputArea1 inputArea2';
+    grid-gap: 3px;
+    padding: 5px;
+    border: solid;
+    border-width: 1px;
+    overflow: auto;
+    margin: 5px;
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border-radius: 10px;
+    width: auto;
+}
+
+.cashflowGrid1 {
+    grid-area: cfArea1;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.cashflowGrid2 {
+    grid-area: cfArea2;
+    width: 100%;
+    height: auto;
+    display: table;
+}
+.cashflowGrid3 {
+    grid-area: cfArea3;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.cashflowGrid {
+    display: grid;
+    grid-template-areas: 
+        'cfArea1' 
+        'cfArea2' 
+        'cfArea3';
+    grid-gap: 3px;
+    padding: 5px;
+    border: solid;
+    border-width: 1px;
+    overflow: auto;
+    margin: 5px;
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.cashflowBtnSet {
+    width: calc(100% / 3);
+    display: table-cell;
+}
+
+.btnStyle {
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 11px;
+    background: #60c750;
+    padding: 5px;
+    border: solid #1b9905 1px;
+    text-decoration: none;
+    margin: 5px;
+    display: inline-block;
+    width: 100px;
+}
+
+    .btnStyle:hover {
+        background: #339120;
+        text-decoration: none;
+    }
